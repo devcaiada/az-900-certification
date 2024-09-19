@@ -49,7 +49,7 @@
 
 # Criando Máquinas Virtuais na Azure
 
-![virtual-machine]()
+![virtual-machine](https://github.com/devcaiada/az-900-certification/blob/main/assets/virtual-machine.jpg?raw=true)
 
 ### 1. Acesse o Portal do Azure:
 
