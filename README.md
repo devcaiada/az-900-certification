@@ -1,6 +1,6 @@
 # Microsoft Azure Essentials
 
-![capa]()
+![capa](https://github.com/devcaiada/az-900-certification/blob/main/assets/azure-capa.png?raw=true)
 
 # Microsoft Azure - Localizando Serviços por Categoria
 
@@ -24,6 +24,9 @@
   - Segurança
   - DevOps
   - Migração
+
+![categorias]()
+
 - Clique em qualquer uma dessas categorias para visualizar os serviços disponíveis dentro de cada uma1.
 
 ### 4. Use a Barra de Pesquisa:
