@@ -47,7 +47,9 @@
 
 <br></br>
 
-# Criando máquinas Virtuais na Azure
+# Criando Máquinas Virtuais na Azure
+
+![virtual-machine]()
 
 ### 1. Acesse o Portal do Azure:
 
