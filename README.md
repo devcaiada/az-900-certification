@@ -2,7 +2,7 @@
 
 ![capa](https://github.com/devcaiada/az-900-certification/blob/main/assets/azure-capa.png?raw=true)
 
-# Microsoft Azure - Localizando Serviços por Categoria
+# Localizando Serviços por Categoria
 
 ### 1. Acesse o Portal do Azure:
 
@@ -25,7 +25,7 @@
   - DevOps
   - Migração
 
-![categorias]()
+![categorias](https://github.com/devcaiada/az-900-certification/blob/main/assets/categorias.png?raw=true)
 
 - Clique em qualquer uma dessas categorias para visualizar os serviços disponíveis dentro de cada uma1.
 
@@ -44,3 +44,46 @@
 ### 7. Criar e Configurar o Serviço:
 
 - Ao encontrar o serviço desejado, clique nele para começar o processo de configuração. Siga as instruções na tela para configurar e provisionar o serviço no seu ambiente Azure.
+
+<br></br>
+
+# Criando máquinas Virtuais na Azure
+
+### 1. Acesse o Portal do Azure:
+
+- Vá para portal.azure.com e faça login com suas credenciais da conta Microsoft.
+
+### 2. Inicie o Processo de Criação:
+
+- No painel do Azure, clique em “Criar um recurso” no menu lateral esquerdo.
+- Na barra de pesquisa, digite “Máquina Virtual” e selecione “Máquinas Virtuais” nos resultados.
+
+### 3. Configuração da Máquina Virtual:
+
+- Clique em “Criar” e depois em “Máquina virtual do Azure”.
+- Preencha os detalhes da instância:
+  - **Nome**: Escolha um nome para sua VM.
+  - **Região**: Selecione a região onde a VM será hospedada.
+  - **Imagem**: Escolha o sistema operacional (por exemplo, Windows Server 2022).
+  - **Tamanho**: Selecione o tamanho da VM com base nas suas necessidades de CPU e memória.
+
+### 4. Configuração da Conta de Administrador:
+
+- Insira um nome de usuário e uma senha para a conta de administrador da VM.
+
+### 5. Configuração de Rede:
+
+- Em “Regras de porta de entrada”, selecione as portas que deseja abrir (por exemplo, RDP para Windows ou SSH para Linux).
+
+### 6. Revisar e Criar:
+
+- Clique em “Revisar + criar” na parte inferior da página.
+- Após a validação, clique em “Criar” para iniciar a implantação da VM.
+
+### 7. Conectar à Máquina Virtual:
+
+- Após a implantação, vá para o recurso da VM.
+- Clique em “Conectar” e selecione “RDP” (para Windows) ou “SSH” (para Linux).
+- Baixe o arquivo RDP ou use o comando SSH fornecido para se conectar à VM.
+
+Seguindo esses passos, você conseguirá criar e acessar uma máquina virtual no Azure.
