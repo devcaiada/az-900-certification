@@ -96,6 +96,8 @@ Seguindo esses passos, você conseguirá criar e acessar uma máquina virtual no
 
 O Microsoft Azure oferece diversas opções para a criação de bancos de dados na nuvem. Um dos serviços mais populares é o Azure SQL Database, um serviço de banco de dados relacional gerenciado. Abaixo está um passo a passo detalhado para criar uma instância de banco de dados no Azure.
 
+![database](https://github.com/devcaiada/az-900-certification/blob/main/assets/sqlazure_img08-1.jpg?raw=true)
+
 ### 1. Acesse o Portal do Azure
  - Vá até o [Portal do Azure](https://azure.microsoft.com/pt-br/get-started/azure-portal/).
  - Faça login com sua conta Microsoft ou crie uma, se ainda não tiver.
@@ -103,6 +105,8 @@ O Microsoft Azure oferece diversas opções para a criação de bancos de dados 
 ### 2. Navegue até a Seção de Serviços de Banco de Dados
  - No painel esquerdo, clique em "**Criar um recurso**".
  - Em **Banco de Dados**, selecione a opção "**SQL Database**" ou outro serviço de banco de dados que você deseja, como **Azure Database for MySQL** ou **Azure Database for PostgreSQL**.
+
+ ![sql](https://github.com/devcaiada/az-900-certification/blob/main/assets/select-deployment.png?raw=true)
 
 ### 3. Configurar o Servidor SQL
  - Na tela de criação do banco de dados, preencha os campos necessários:
@@ -145,3 +149,5 @@ O Microsoft Azure oferece diversas opções para a criação de bancos de dados 
 
 ### 10. Gerenciar e Monitorar
  - Uma vez que o banco de dados está rodando, você pode monitorar seu desempenho diretamente pelo **Azure Monitor**, ajustar parâmetros de escalabilidade, configurar backups e gerenciar usuários.
+
+ 
