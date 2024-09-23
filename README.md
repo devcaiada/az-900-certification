@@ -236,6 +236,8 @@ O Microsoft Azure oferece diversas opções para a criação de bancos de dados 
 - **Imagem**: Selecione o sistema operacional desejado (Windows ou Linux).
 - **Tamanho**: Escolha o tamanho da VM com base nas suas necessidades de CPU e memória.
 
+![vms](https://github.com/devcaiada/az-900-certification/blob/main/assets/VMs.jpg?raw=true)
+
 ## Passo 2: Configurar Recursos
 
 ### 1. Discos:
