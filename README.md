@@ -99,95 +99,121 @@ O Microsoft Azure oferece diversas opções para a criação de bancos de dados 
 ![database](https://github.com/devcaiada/az-900-certification/blob/main/assets/sqlazure_img08-1.jpg?raw=true)
 
 ### 1. Acesse o Portal do Azure
- - Vá até o [Portal do Azure](https://azure.microsoft.com/pt-br/get-started/azure-portal/).
- - Faça login com sua conta Microsoft ou crie uma, se ainda não tiver.
+
+- Vá até o [Portal do Azure](https://azure.microsoft.com/pt-br/get-started/azure-portal/).
+- Faça login com sua conta Microsoft ou crie uma, se ainda não tiver.
 
 ### 2. Navegue até a Seção de Serviços de Banco de Dados
- - No painel esquerdo, clique em "**Criar um recurso**".
- - Em **Banco de Dados**, selecione a opção "**SQL Database**" ou outro serviço de banco de dados que você deseja, como **Azure Database for MySQL** ou **Azure Database for PostgreSQL**.
 
- ![sql](https://github.com/devcaiada/az-900-certification/blob/main/assets/select-deployment.png?raw=true)
+- No painel esquerdo, clique em "**Criar um recurso**".
+- Em **Banco de Dados**, selecione a opção "**SQL Database**" ou outro serviço de banco de dados que você deseja, como **Azure Database for MySQL** ou **Azure Database for PostgreSQL**.
+
+![sql](https://github.com/devcaiada/az-900-certification/blob/main/assets/select-deployment.png?raw=true)
 
 ### 3. Configurar o Servidor SQL
- - Na tela de criação do banco de dados, preencha os campos necessários:
-    - **Assinatura**: Escolha a assinatura do Azure (se você tiver mais de uma).
-    - **Grupo de Recursos**: Selecione um grupo de recursos existente ou crie um novo. Os grupos de recursos ajudam a organizar e gerenciar todos os recursos relacionados ao banco de dados.
-    - **Nome do Banco de Dados**: Escolha um nome único para o banco de dados.
-    - **Servidor**: Você precisa criar ou selecionar um servidor SQL existente. Clique em "**Criar Novo**" para configurar um servidor:
-      - **Nome do servidor**: Escolha um nome exclusivo.
-      - **Localização**: Escolha a região mais próxima ou que faça sentido para seu projeto.
-      - **Administração do Servidor**: Defina um nome de administrador e senha para a instância do servidor.
+
+- Na tela de criação do banco de dados, preencha os campos necessários:
+  - **Assinatura**: Escolha a assinatura do Azure (se você tiver mais de uma).
+  - **Grupo de Recursos**: Selecione um grupo de recursos existente ou crie um novo. Os grupos de recursos ajudam a organizar e gerenciar todos os recursos relacionados ao banco de dados.
+  - **Nome do Banco de Dados**: Escolha um nome único para o banco de dados.
+  - **Servidor**: Você precisa criar ou selecionar um servidor SQL existente. Clique em "**Criar Novo**" para configurar um servidor:
+    - **Nome do servidor**: Escolha um nome exclusivo.
+    - **Localização**: Escolha a região mais próxima ou que faça sentido para seu projeto.
+    - **Administração do Servidor**: Defina um nome de administrador e senha para a instância do servidor.
 
 ### 4. Configurar a Camada de Preço
- - O Azure SQL Database oferece diferentes **camadas de desempenho**:
-    - **Uso Básico**: Para cargas de trabalho leves, como desenvolvimento e teste.
-    - **Uso Geral (Standard)**: Para cargas de trabalho de produção de uso moderado.
-    - **Uso Crítico (Premium)**: Para aplicações que exigem alta disponibilidade e desempenho constante.
- - Escolha a camada que melhor se adequa ao seu projeto e defina a quantidade de recursos (como vCores e armazenamento).
+
+- O Azure SQL Database oferece diferentes **camadas de desempenho**:
+  - **Uso Básico**: Para cargas de trabalho leves, como desenvolvimento e teste.
+  - **Uso Geral (Standard)**: Para cargas de trabalho de produção de uso moderado.
+  - **Uso Crítico (Premium)**: Para aplicações que exigem alta disponibilidade e desempenho constante.
+- Escolha a camada que melhor se adequa ao seu projeto e defina a quantidade de recursos (como vCores e armazenamento).
 
 ### 5. Configurações Adicionais (Opcional)
- - Você pode ajustar configurações avançadas, como habilitar ou não a replicação geográfica, configurar backups automáticos e definir políticas de segurança.
- - Selecione a **autenticação** que deseja utilizar: **SQL Authentication** ou **Azure Active Directory**.
+
+- Você pode ajustar configurações avançadas, como habilitar ou não a replicação geográfica, configurar backups automáticos e definir políticas de segurança.
+- Selecione a **autenticação** que deseja utilizar: **SQL Authentication** ou **Azure Active Directory**.
 
 ### 6. Criar o Banco de Dados
- - Após definir todas as configurações, clique em **Revisar + Criar**.
- - O Azure irá validar as configurações. Se estiver tudo certo, clique em **Criar**.
+
+- Após definir todas as configurações, clique em **Revisar + Criar**.
+- O Azure irá validar as configurações. Se estiver tudo certo, clique em **Criar**.
 
 ### 7. Acessar o Banco de Dados
- - Uma vez que a instância estiver provisionada (o que pode levar alguns minutos), você pode acessar o banco de dados diretamente no portal.
- - Para conectar seu banco de dados, você pode usar ferramentas como **Azure Data Studio**, **SQL Server Management Studio (SSMS)** ou até mesmo programaticamente via uma aplicação.
+
+- Uma vez que a instância estiver provisionada (o que pode levar alguns minutos), você pode acessar o banco de dados diretamente no portal.
+- Para conectar seu banco de dados, você pode usar ferramentas como **Azure Data Studio**, **SQL Server Management Studio (SSMS)** ou até mesmo programaticamente via uma aplicação.
 
 ### 8. Configurar Regras de Firewall
- - Para permitir conexões ao banco de dados de fora da rede do Azure, você precisa configurar as **Regras de Firewall**:
-    - No portal do Azure, navegue até a instância do banco de dados.
-    - No menu à esquerda, selecione **Configurações do Firewall** e **Rede Virtual**.
-    - Adicione o endereço IP de sua máquina local (ou de onde você deseja permitir acesso) e salve as alterações.
+
+- Para permitir conexões ao banco de dados de fora da rede do Azure, você precisa configurar as **Regras de Firewall**:
+  - No portal do Azure, navegue até a instância do banco de dados.
+  - No menu à esquerda, selecione **Configurações do Firewall** e **Rede Virtual**.
+  - Adicione o endereço IP de sua máquina local (ou de onde você deseja permitir acesso) e salve as alterações.
 
 ### 9. Testar a Conexão
- - Use uma ferramenta como **SSMS ou Azure Data Studio** para testar a conexão. Insira o nome do servidor, o nome de usuário e a senha que você configurou na criação do servidor SQL.
- - Certifique-se de que o firewall do banco de dados esteja configurado corretamente para permitir acesso ao endereço IP da sua máquina.
+
+- Use uma ferramenta como **SSMS ou Azure Data Studio** para testar a conexão. Insira o nome do servidor, o nome de usuário e a senha que você configurou na criação do servidor SQL.
+- Certifique-se de que o firewall do banco de dados esteja configurado corretamente para permitir acesso ao endereço IP da sua máquina.
 
 ### 10. Gerenciar e Monitorar
- - Uma vez que o banco de dados está rodando, você pode monitorar seu desempenho diretamente pelo **Azure Monitor**, ajustar parâmetros de escalabilidade, configurar backups e gerenciar usuários.
 
- <br></br>
+- Uma vez que o banco de dados está rodando, você pode monitorar seu desempenho diretamente pelo **Azure Monitor**, ajustar parâmetros de escalabilidade, configurar backups e gerenciar usuários.
 
- # Construindo Arquiteturas no Azure
+<br></br>
+
+# Construindo Arquiteturas no Azure
 
 ### 1. Acesse o Portal do Azure:
- - Entre no [Portal do Azure](https://azure.microsoft.com/pt-br/get-started/azure-portal/).
+
+- Entre no [Portal do Azure](https://azure.microsoft.com/pt-br/get-started/azure-portal/).
 
 ### 2. Navegue até Grupos de Recursos:
- - No menu à esquerda, selecione **Grupos de Recursos**.
+
+- No menu à esquerda, selecione **Grupos de Recursos**.
+
+![resource_g](https://github.com/devcaiada/az-900-certification/blob/main/assets/resource%20group%201.png?raw=true)
 
 ### 3. Criar um Novo Grupo de Recursos:
- - Clique em Criar.
- - Preencha os seguintes campos:
-   - **Assinatura**: Selecione sua assinatura do Azure.
-   - **Grupo** de Recursos: Insira um nome para o novo grupo de recursos.
-   - **Região**: Escolha uma localização do Azure, como “EUA Central”.
- - Clique em **Examinar + Criar** e depois em **Criar**.
+
+- Clique em Criar.
+- Preencha os seguintes campos:
+  - **Assinatura**: Selecione sua assinatura do Azure.
+  - **Grupo** de Recursos: Insira um nome para o novo grupo de recursos.
+  - **Região**: Escolha uma localização do Azure, como “EUA Central”.
+- Clique em **Examinar + Criar** e depois em **Criar**.
 
 ### 4. Verificar a Criação:
- - Após alguns segundos, o grupo de recursos será criado. Você pode atualizá-lo na lista de grupos de recursos ou clicar na notificação para abrir o grupo recém-criado.
+
+- Após alguns segundos, o grupo de recursos será criado. Você pode atualizá-lo na lista de grupos de recursos ou clicar na notificação para abrir o grupo recém-criado.
 
 ## Gerenciar Permissões
 
+![permission](https://github.com/devcaiada/az-900-certification/blob/main/assets/resource%20group.png?raw=true)
+
 ### 1. Acessar Controle de Acesso (IAM):
- - Dentro do grupo de recursos, selecione **Controle de Acesso (IAM)** no menu à esquerda.
+
+- Dentro do grupo de recursos, selecione **Controle de Acesso (IAM)** no menu à esquerda.
+
 ### 2. Adicionar uma Função:
- - Clique em **Adicionar** e depois em **Adicionar atribuição de função**.
- - Escolha a função desejada (por exemplo, **Contribuidor**).
- - Selecione o usuário ou grupo que receberá essa função.
- - Clique em **Salvar** para aplicar as permissões.
+
+- Clique em **Adicionar** e depois em **Adicionar atribuição de função**.
+- Escolha a função desejada (por exemplo, **Contribuidor**).
+- Selecione o usuário ou grupo que receberá essa função.
+- Clique em **Salvar** para aplicar as permissões.
 
 ## Aplicar Bloqueios
+
 ### 1. Acessar Configurações de Bloqueio:
- - No menu do grupo de recursos, selecione **Bloqueios**.
+
+- No menu do grupo de recursos, selecione **Bloqueios**.
+
 ### 2. Adicionar um Bloqueio:
- - Clique em **Adicionar**.
- - Preencha os seguintes campos:
-   - **Nome**: Insira um nome para o bloqueio.
-   - **Tipo de Bloqueio**: Escolha entre **Excluir** (impede a exclusão) ou **Somente leitura** (impede alterações).
-   - **Notas**: Adicione qualquer informação adicional, se necessário.
- - Clique em **OK** para aplicar o bloqueio.
+
+- Clique em **Adicionar**.
+- Preencha os seguintes campos:
+  - **Nome**: Insira um nome para o bloqueio.
+  - **Tipo de Bloqueio**: Escolha entre **Excluir** (impede a exclusão) ou **Somente leitura** (impede alterações).
+  - **Notas**: Adicione qualquer informação adicional, se necessário.
+- Clique em **OK** para aplicar o bloqueio.
+
