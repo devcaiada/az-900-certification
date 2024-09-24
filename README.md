@@ -288,13 +288,13 @@ Vamos criar um passo a passo para criar uma conta de armazenamento no Azure e fa
 ## 1. Acesse o Portal do Azure:
  - Vá para o [Portal do Azure](https://azure.microsoft.com/pt-br/get-started/azure-portal/) e faça login com sua conta.
 
- ![menu_storage]()
+ ![menu_storage](https://github.com/devcaiada/az-900-certification/blob/main/assets/Menu-storage.jpg?raw=true)
 
 ## 2. Criar uma Nova Conta de Armazenamento:
  - No menu à esquerda, selecione “Contas de armazenamento”.
  - Clique em “Criar” para iniciar o processo de criação.
 
-![create_button]()
+![create_button](https://github.com/devcaiada/az-900-certification/blob/main/assets/create-button.jpg?raw=true)
 
  - Preencha os detalhes necessários:
    - Assinatura: Selecione sua assinatura do Azure.
@@ -304,7 +304,7 @@ Vamos criar um passo a passo para criar uma conta de armazenamento no Azure e fa
    - Desempenho: Escolha entre Standard ou Premium, dependendo de suas necessidades.
    - Replicação: Selecione a opção de replicação desejada (LRS, GRS, RA-GRS, etc.).
 
-![basic]()
+![basic](https://github.com/devcaiada/az-900-certification/blob/main/assets/basic.jpg?raw=true)
 
 ## 3. Configurações Adicionais:
  - Configure as opções adicionais conforme necessário, como redes virtuais, tags, etc.
@@ -314,6 +314,8 @@ Vamos criar um passo a passo para criar uma conta de armazenamento no Azure e fa
 
 # Serviços de Transferência e Migração de Dados
 ## 1. AzCopy:
+![azcopy](https://github.com/devcaiada/az-900-certification/blob/main/assets/azcopy.jpg?raw=true)
+
  - AzCopy é uma ferramenta de linha de comando que permite copiar dados de e para contas de armazenamento do Azure de forma eficiente.
  - Instalação: Baixe e instale o AzCopy a partir do site oficial.
 ### Uso Básico:
