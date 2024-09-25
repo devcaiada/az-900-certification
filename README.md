@@ -424,6 +424,9 @@ azcopy copy 'https://<storage-account-name>.blob.core.windows.net/<container-nam
 # Otimizando Custos no Azure com a Calculadora TCO
 
 ### 1. Acesse a Calculadora TCO: Vá para a [Calculadora TCO do Azure](https://azure.microsoft.com/pt-br/pricing/tco/calculator/).
+
+![TCO](https://github.com/devcaiada/az-900-certification/blob/main/assets/TCO.png?raw=true)
+
  - **Insira os Detalhes da Infraestrutura Atual**: Adicione informações sobre seus servidores, armazenamento, rede e outros componentes de TI que você está usando atualmente.
  - **Configurar o Ambiente do Azure**: Selecione os serviços do Azure que você planeja usar para substituir sua infraestrutura atual.
  - **Comparar Custos**: A calculadora irá comparar os custos atuais com os custos estimados no Azure, mostrando as possíveis economias.
