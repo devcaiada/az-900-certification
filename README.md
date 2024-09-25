@@ -286,53 +286,135 @@ O Microsoft Azure oferece diversas opções para a criação de bancos de dados 
 Vamos criar um passo a passo para criar uma conta de armazenamento no Azure e falar sobre os serviços de transferência de dados, como o AzCopy.
 
 ## 1. Acesse o Portal do Azure:
- - Vá para o [Portal do Azure](https://azure.microsoft.com/pt-br/get-started/azure-portal/) e faça login com sua conta.
 
- ![menu_storage](https://github.com/devcaiada/az-900-certification/blob/main/assets/Menu-storage.jpg?raw=true)
+- Vá para o [Portal do Azure](https://azure.microsoft.com/pt-br/get-started/azure-portal/) e faça login com sua conta.
+
+![menu_storage](https://github.com/devcaiada/az-900-certification/blob/main/assets/Menu-storage.jpg?raw=true)
 
 ## 2. Criar uma Nova Conta de Armazenamento:
- - No menu à esquerda, selecione “Contas de armazenamento”.
- - Clique em “Criar” para iniciar o processo de criação.
+
+- No menu à esquerda, selecione “Contas de armazenamento”.
+- Clique em “Criar” para iniciar o processo de criação.
 
 ![create_button](https://github.com/devcaiada/az-900-certification/blob/main/assets/create-button.jpg?raw=true)
 
- - Preencha os detalhes necessários:
-   - Assinatura: Selecione sua assinatura do Azure.
-   - Grupo de Recursos: Escolha um grupo de recursos existente ou crie um novo.
-   - Nome da Conta de Armazenamento: Insira um nome único para sua conta.
-   - Região: Selecione a região onde deseja criar a conta.
-   - Desempenho: Escolha entre Standard ou Premium, dependendo de suas necessidades.
-   - Replicação: Selecione a opção de replicação desejada (LRS, GRS, RA-GRS, etc.).
+- Preencha os detalhes necessários:
+  - Assinatura: Selecione sua assinatura do Azure.
+  - Grupo de Recursos: Escolha um grupo de recursos existente ou crie um novo.
+  - Nome da Conta de Armazenamento: Insira um nome único para sua conta.
+  - Região: Selecione a região onde deseja criar a conta.
+  - Desempenho: Escolha entre Standard ou Premium, dependendo de suas necessidades.
+  - Replicação: Selecione a opção de replicação desejada (LRS, GRS, RA-GRS, etc.).
 
 ![basic](https://github.com/devcaiada/az-900-certification/blob/main/assets/basic.jpg?raw=true)
 
 ## 3. Configurações Adicionais:
- - Configure as opções adicionais conforme necessário, como redes virtuais, tags, etc.
- - Clique em “Revisar e criar” e depois em “Criar” para finalizar a criação da conta.
+
+- Configure as opções adicionais conforme necessário, como redes virtuais, tags, etc.
+- Clique em “Revisar e criar” e depois em “Criar” para finalizar a criação da conta.
 
 <br></br>
 
 # Serviços de Transferência e Migração de Dados
+
 ## 1. AzCopy:
+
 ![azcopy](https://github.com/devcaiada/az-900-certification/blob/main/assets/azcopy.jpg?raw=true)
 
- - AzCopy é uma ferramenta de linha de comando que permite copiar dados de e para contas de armazenamento do Azure de forma eficiente.
- - Instalação: Baixe e instale o AzCopy a partir do site oficial.
-### Uso Básico:
-  - Para copiar um arquivo local para um contêiner de blob:
-~~~ 
-azcopy copy 'C:\local\path\to\file.txt' 'https://<storage-account-name>.blob.core.windows.net/<container-name>/file.txt'
-~~~
+- AzCopy é uma ferramenta de linha de comando que permite copiar dados de e para contas de armazenamento do Azure de forma eficiente.
+- Instalação: Baixe e instale o AzCopy a partir do site oficial.
 
-   - Para copiar um blob para um arquivo local:
-~~~   
+### Uso Básico:
+
+- Para copiar um arquivo local para um contêiner de blob:
+
+```
+azcopy copy 'C:\local\path\to\file.txt' 'https://<storage-account-name>.blob.core.windows.net/<container-name>/file.txt'
+```
+
+- Para copiar um blob para um arquivo local:
+
+```
 azcopy copy 'https://<storage-account-name>.blob.core.windows.net/<container-name>/file.txt' 'C:\local\path\to\file.txt'
-~~~
+```
 
 ## 2. Azure Data Factory:
- - Azure Data Factory é um serviço de integração de dados baseado em nuvem que permite criar, agendar e orquestrar fluxos de trabalho de dados.
- - Ele suporta a movimentação de dados entre uma variedade de fontes de dados, incluindo armazenamento do Azure, bancos de dados SQL, e muito mais.
+
+- Azure Data Factory é um serviço de integração de dados baseado em nuvem que permite criar, agendar e orquestrar fluxos de trabalho de dados.
+- Ele suporta a movimentação de dados entre uma variedade de fontes de dados, incluindo armazenamento do Azure, bancos de dados SQL, e muito mais.
 
 ## 3. Azure Storage Explorer:
- - Azure Storage Explorer é uma ferramenta gráfica que facilita a gestão de dados no armazenamento do Azure.
- - Permite visualizar, carregar, baixar e gerenciar blobs, arquivos, filas e tabelas.
+
+- Azure Storage Explorer é uma ferramenta gráfica que facilita a gestão de dados no armazenamento do Azure.
+- Permite visualizar, carregar, baixar e gerenciar blobs, arquivos, filas e tabelas.
+
+<br></br>
+
+# Identidade, Acesso e Segurando na Azure
+
+## Acessar o Microsoft Entra ID
+
+![entra-id]()
+
+### 1. Entrar no Portal do Azure:
+
+- Acesse o [Portal do Azure](https://azure.microsoft.com/pt-br/get-started/azure-portal/).
+- No menu lateral, selecione **Microsoft Entra ID**.
+
+### 2. Gerenciar Funções e Administradores
+
+1.  Visualizar Funções:
+
+- No painel do **Microsoft Entra ID**, selecione **Funções e Administradores**.
+- Aqui, você pode ver todas as funções disponíveis. Clique em uma função para ver os detalhes e os membros atribuídos.
+
+2.  Adicionar Administradores:
+
+- Para adicionar um novo administrador, selecione a função desejada e clique em **Adicionar membro**.
+- Procure e selecione o usuário que deseja adicionar.
+
+### 3. Configurar Redefinição de Senha Self-Service (SSPR)
+
+1.  Ativar SSPR:
+
+- No painel do Microsoft Entra ID, selecione **Redefinição de senha**.
+- Ative a opção **Self-service password reset**.
+
+![ssrp]()
+
+2.  Configurar Métodos de Autenticação:
+
+- Defina os métodos de autenticação que os usuários devem usar para redefinir suas senhas, como e-mail, telefone ou perguntas de segurança.
+- Salve as configurações.
+
+### 4. Criar Novo Usuário ou Convidar Usuário Externo
+
+1.  Criar Novo Usuário:
+
+- No painel do Microsoft Entra ID, selecione **Usuários**.
+- Clique em **Novo usuário** e preencha as informações necessárias, como nome, nome de usuário e grupo de funções.
+- Salve o novo usuário.
+
+2.  Convidar Usuário Externo:
+
+- No painel do Microsoft Entra ID, selecione **Usuários**.
+- Clique em **Novo usuário** e selecione **Convidar usuário**.
+- Insira o e-mail do usuário externo e configure as permissões e grupos aos quais ele terá acesso.
+- Envie o convite.
+
+### 5. Utilizar o Microsoft Defender for Cloud como Validador de Segurança
+
+1.  Configurar o **Microsoft Defender for Cloud**:
+
+- No Portal do Azure, navegue até **Microsoft Defender for Cloud**.
+- Ative o Microsoft Defender for Cloud para suas assinaturas e recursos.
+
+2.  Monitorar e Validar Segurança:
+
+- O Microsoft Defender for Cloud fornece uma visão geral da postura de segurança da sua organização.
+- Ele identifica vulnerabilidades e recomendações de segurança para proteger seus recursos.
+- Utilize as recomendações para melhorar a segurança e conformidade dos seus recursos na Azure.
+
+### EXTRA
+
+- **Os usuários são excluídos permanentemente de forma automática 30 dias após serem deletados.**
