@@ -350,11 +350,11 @@ azcopy copy 'https://<storage-account-name>.blob.core.windows.net/<container-nam
 
 <br></br>
 
-# Identidade, Acesso e Segurando na Azure
+# Identidade, Acesso e Segurança na Azure
 
 ## Acessar o Microsoft Entra ID
 
-![entra-id]()
+![entra-id](https://github.com/devcaiada/az-900-certification/blob/main/assets/Microsoft-Entra-ID-1.png?raw=true)
 
 ### 1. Entrar no Portal do Azure:
 
@@ -380,7 +380,7 @@ azcopy copy 'https://<storage-account-name>.blob.core.windows.net/<container-nam
 - No painel do Microsoft Entra ID, selecione **Redefinição de senha**.
 - Ative a opção **Self-service password reset**.
 
-![ssrp]()
+![ssrp](https://github.com/devcaiada/az-900-certification/blob/main/assets/self%20service%20reset.png?raw=true)
 
 2.  Configurar Métodos de Autenticação:
 
