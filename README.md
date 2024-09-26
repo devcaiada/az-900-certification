@@ -500,7 +500,7 @@ Inclusive existe até uma profissão especializada para a otimização de custos
 
 - Use o painel de conformidade do **Azure Policy** para monitorar e gerenciar a conformidade das suas políticas.
 
-![policy-compliance]()
+![policy-compliance](https://github.com/devcaiada/az-900-certification/blob/main/assets/policy-compliance.png?raw=true)
 
 ## EXTRA
 
