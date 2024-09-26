@@ -526,9 +526,9 @@ Inclusive existe até uma profissão especializada para a otimização de custos
 
 <br></br>
 
-# Ferramentas de Implaração na Azure - Command Line Interface (CLI)
+# Ferramentas de Implatação na Azure - Command Line Interface (CLI)
 
-![bicep]()
+![bicep](https://github.com/devcaiada/az-900-certification/blob/main/assets/bicep.png?raw=true)
 
 ## PowerShell (PS)
 O **PowerShell** é uma linguagem de script e shell de linha de comando desenvolvida pela Microsoft. É amplamente utilizada para automação de tarefas administrativas e gerenciamento de sistemas. Algumas características principais do PowerShell incluem:
