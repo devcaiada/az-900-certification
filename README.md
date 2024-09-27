@@ -531,54 +531,64 @@ Inclusive existe até uma profissão especializada para a otimização de custos
 ![bicep](https://github.com/devcaiada/az-900-certification/blob/main/assets/bicep.png?raw=true)
 
 ## PowerShell (PS)
+
 O **PowerShell** é uma linguagem de script e shell de linha de comando desenvolvida pela Microsoft. É amplamente utilizada para automação de tarefas administrativas e gerenciamento de sistemas. Algumas características principais do PowerShell incluem:
 
- - **Objetos**: Diferente de muitos shells de linha de comando que trabalham com texto, o PowerShell trabalha com objetos. Isso permite manipular dados de forma mais robusta e flexível.
- - **Cmdlets**: São comandos especializados que realizam tarefas específicas. Por exemplo, Get-Process para listar processos em execução.
- - **Pipeline**: Permite encadear comandos, passando a saída de um comando como entrada para o próximo, facilitando a automação de tarefas complexas.
- - **Cross-Platform**: Originalmente disponível apenas no Windows, o PowerShell agora é multiplataforma, funcionando também em Linux e macOS.
+- **Objetos**: Diferente de muitos shells de linha de comando que trabalham com texto, o PowerShell trabalha com objetos. Isso permite manipular dados de forma mais robusta e flexível.
+- **Cmdlets**: São comandos especializados que realizam tarefas específicas. Por exemplo, Get-Process para listar processos em execução.
+- **Pipeline**: Permite encadear comandos, passando a saída de um comando como entrada para o próximo, facilitando a automação de tarefas complexas.
+- **Cross-Platform**: Originalmente disponível apenas no Windows, o PowerShell agora é multiplataforma, funcionando também em Linux e macOS.
 
 ## Bicep
+
 O **Bicep** é uma linguagem específica de domínio (DSL) desenvolvida pela Microsoft para a implantação de recursos no Azure. É uma alternativa ao uso de templates **JSON** do **Azure Resource Manager (ARM)**. Algumas características do Bicep incluem:
 
- - **Sintaxe Declarativa**: Permite definir a infraestrutura que você deseja implantar de forma clara e concisa.
- - **Suporte Completo ao Azure**: Suporta todos os tipos de recursos e versões de API do Azure, permitindo usar novos serviços assim que são lançados.
- - **Facilidade de Uso**: Comparado aos modelos JSON, os arquivos Bicep são mais fáceis de ler e escrever.
- - **Integração com CLI**: O Bicep pode ser usado diretamente com a CLI do Azure, facilitando a conversão de arquivos Bicep em templates ARM JSON e a implantação de recursos.
+- **Sintaxe Declarativa**: Permite definir a infraestrutura que você deseja implantar de forma clara e concisa.
+- **Suporte Completo ao Azure**: Suporta todos os tipos de recursos e versões de API do Azure, permitindo usar novos serviços assim que são lançados.
+- **Facilidade de Uso**: Comparado aos modelos JSON, os arquivos Bicep são mais fáceis de ler e escrever.
+- **Integração com CLI**: O Bicep pode ser usado diretamente com a CLI do Azure, facilitando a conversão de arquivos Bicep em templates ARM JSON e a implantação de recursos.
 
- ## Principais Comandos
+## Principais Comandos
 
 ### PowerShell (PS)
+
 ### 1. Conectar ao Azure:
-~~~
+
+```
 Connect-AzAccount
-~~~
- - Este comando é usado para autenticar e conectar sua sessão do PowerShell ao Azure.
+```
+
+- Este comando é usado para autenticar e conectar sua sessão do PowerShell ao Azure.
 
 ### 2. Implantar um arquivo Bicep em um grupo de recursos:
-~~~
+
+```
 New-AzResourceGroupDeployment -ResourceGroupName <nome-do-grupo-de-recursos> -TemplateFile <caminho-para-o-arquivo-bicep>
-~~~
- - Este comando implanta os recursos definidos em um arquivo Bicep em um grupo de recursos específico.
+```
+
+- Este comando implanta os recursos definidos em um arquivo Bicep em um grupo de recursos específico.
 
 ### 3. Implantar em uma assinatura:
-~~~
-New-AzSubscriptionDeployment -Location <localização> -TemplateFile <caminho-para-o-arquivo-bicep>
-~~~
 
- - Use este comando para implantar recursos no nível da assinatura.
+```
+New-AzSubscriptionDeployment -Location <localização> -TemplateFile <caminho-para-o-arquivo-bicep>
+```
+
+- Use este comando para implantar recursos no nível da assinatura.
 
 ### 4. Implantar em um grupo de gerenciamento:
-~~~
-New-AzManagementGroupDeployment -ManagementGroupId <id-do-grupo-de-gerenciamento> -Location <localização> -TemplateFile <caminho-para-o-arquivo-bicep>
-~~~
 
- - Este comando é usado para implantar recursos no nível do grupo de gerenciamento.
+```
+New-AzManagementGroupDeployment -ManagementGroupId <id-do-grupo-de-gerenciamento> -Location <localização> -TemplateFile <caminho-para-o-arquivo-bicep>
+```
+
+- Este comando é usado para implantar recursos no nível do grupo de gerenciamento.
 
 ### Bicep
 
 ### 1. Definir uma conta de armazenamento:
-~~~
+
+```
 param location string = resourceGroup().location
 param storageAccountName string = 'mystorageaccount${uniqueString(resourceGroup().id)}'
 
@@ -593,13 +603,54 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2023-04-01' = {
     accessTier: 'Hot'
   }
 }
-~~~
+```
 
- - Este exemplo define uma conta de armazenamento no Azure.
+- Este exemplo define uma conta de armazenamento no Azure.
 
 ### 2. Implantar um arquivo Bicep usando a CLI do Azure:
-~~~
+
+```
 az deployment group create --resource-group <nome-do-grupo-de-recursos> --template-file <caminho-para-o-arquivo-bicep>
-~~~
+```
 
 - Este comando usa a CLI do Azure para implantar os recursos definidos em um arquivo Bicep.
+
+<br></br>
+
+# Monitoramento Inteligente com o Azure
+
+Vamos explorar o **Azure Monitor Insights** e o **Azure Advisor Recommendations** para realizar monitoramentos inteligentes de nossas máquinas virtuais e serviços Azure.
+
+## Azure Monitor Insights
+
+![azure-monitor]()
+
+O **Azure Monitor Insights** é uma coleção de visualizações e funcionalidades personalizadas que ajudam a monitorar e analisar o desempenho e a saúde dos seus recursos no Azure. Aqui estão alguns dos principais componentes:
+
+1.  **VM Insights**: Monitora o desempenho e a saúde das suas Máquinas Virtuais (VMs) e Conjuntos de Escala de Máquinas Virtuais. Ele analisa processos e dependências, fornecendo uma visão abrangente do estado das VMs.
+
+2.  **Container Insights**: Monitora o desempenho de cargas de trabalho de contêineres implantadas em clusters **Kubernetes** gerenciados no **Azure Kubernetes Service (AKS)**. Coleta métricas e logs dos controladores, nós e contêineres.
+
+3.  **Network Insights**: Oferece uma visão abrangente da saúde e métricas de todos os seus recursos de rede. Ajuda a identificar dependências de recursos e a resolver problemas de rede.
+
+4.  **Storage Insights**: Fornece monitoramento abrangente das suas contas de armazenamento Azure, oferecendo uma visão unificada do desempenho, capacidade e disponibilidade dos serviços de armazenamento.
+
+![monitor-dashboard]()
+
+## Azure Advisor Recommendations
+
+O **Azure Advisor** é um assistente digital que fornece recomendações personalizadas para ajudar a otimizar suas implantações no Azure. Ele analisa a configuração e o uso dos seus recursos e oferece sugestões para melhorar a eficácia de custos, desempenho, confiabilidade e segurança. Aqui estão algumas das principais funcionalidades:
+
+![azure-advisor]()
+
+1.  **Recomendações de Confiabilidade**: Para garantir e melhorar a continuidade das suas aplicações críticas para o negócio.
+
+2.  **Recomendações de Segurança**: Para detectar ameaças e vulnerabilidades que podem levar a violações de segurança.
+
+3.  **Recomendações de Desempenho**: Para melhorar a velocidade das suas aplicações.
+
+4.  **Recomendações de Custo**: Para otimizar e reduzir seus gastos gerais com o Azure.
+
+5.  **Excelência Operacional**: Para ajudar a alcançar eficiência de processos e fluxos de trabalho, gerenciabilidade de recursos e melhores práticas de implantação.
+
+Além disso, o Azure Advisor está integrado com o **Azure Monitor Log Analytics Workspace**, permitindo que você visualize as recomendações diretamente no portal do Azure.
